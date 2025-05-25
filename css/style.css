@@ -1,12 +1,18 @@
 .navbar-collapse {
   flex-grow: 0;
 }
-
+/* start home */
 .home {
   background-image: url("../images/image3.jpg");
-  height: 90vh;
+  height: 550px;
   background-position: center;
   background-size: cover;
+  position: relative;
+}
+.home .content {
+  position: absolute;
+  top: 20%;
+  left: 5%;
 }
 .home h1 {
   color: #0d6efd;
@@ -22,3 +28,30 @@
 .home a {
   margin: auto;
 }
+.home .social {
+  color: white;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.home .social i {
+  margin-left: 5px;
+}
+/* end home */
+/* start services */
+.services {
+  height: 950px;
+}
+/* end services */
+
+/* start media screen */
+@media (min-width: 425px) {
+  .home .content {
+    width: 70%;
+  }
+}
+@media (min-width: 375px) {
+  .home .content {
+    width: 70%;
+  }
+}
+/* end media screen */
