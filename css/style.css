@@ -1,49 +1,222 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar a {
+  color: #3a6cf4;
+  text-decoration: none;
+  font-weight: 500;
+  padding-left: 30px;
+}
+.navbar a:hover {
+  color: #601cfc;
+}
+.navbar a.logo {
+  color: #3a6cf4;
+}
 .navbar-collapse {
   flex-grow: 0;
 }
 /* start home */
 .home {
-  background-image: url("../images/image3.jpg");
-  height: 550px;
+  background: url("../images/image3.jpg") no-repeat;
+  height: 700px;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 .home .content {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 5%;
 }
-.home h1 {
-  color: #0d6efd;
-  font-size: 45px;
-  font-weight: bold;
-  padding-top: 40px;
+.home .content h1 {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 500;
 }
-.home p {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
+.home .content h2 {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.home .content span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4e9eff;
+  font-size: 3em;
+  font-weight: 600;
 }
 .home a {
-  margin: auto;
+  color: #fff;
+  background-color: #3a6cf4;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
 }
-.home .social {
-  color: white;
-  font-size: 30px;
-  margin-top: 5px;
-}
+
 .home .social i {
-  margin-left: 5px;
+  color: #fff;
+  font-size: 1.7em;
+  padding-right: 30px;
 }
+
 /* end home */
 /* start services */
 .services {
-  height: 950px;
+  height: auto;
+  margin-bottom: 20px;
 }
+.services h1 {
+  display: flex;
+  justify-content: center;
+  color: #3a6cf4;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.services .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card .icon {
+  color: #3a6cf4;
+  font-size: 8em;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h3 {
+  color: #3a6cf4;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
 /* end services */
 
+/* start projects */
+.projects {
+  background-color: #000016;
+  padding-bottom: 5%;
+}
+.projects h1 {
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  color: #3a6cf4;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.projects .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projects .card {
+  background-color: #fff;
+  border: 1px solid #fff;
+  min-height: 14em;
+  width: 23em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+  padding-bottom: 20px;
+}
+
+.projects .card:hover {
+  transform: scale(1.1);
+}
+
+.projects .card:hover .project-image {
+  opacity: 0.9;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-info {
+  padding: 1em;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.more-details {
+  text-decoration: none;
+  color: #3a6cf4;
+}
+
+.more-details:hover {
+  color: #601cfc;
+}
+
+/* end projects */
+
+/* start contactme */
+.contactme h1 {
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  color: #3a6cf4;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+/* end contactme */
+
 /* start media screen */
+@media (min-width: 768px) {
+  .home .content span {
+    font-size: 1.5em;
+  }
+}
 @media (min-width: 425px) {
   .home .content {
     width: 70%;
@@ -52,6 +225,11 @@
 @media (min-width: 375px) {
   .home .content {
     width: 70%;
+  }
+}
+@media (min-width: 320px) {
+  .home .content span {
+    font-size: 2em;
   }
 }
 /* end media screen */
